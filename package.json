@@ -1,0 +1,65 @@
+{
+  "name": "bibliothek",
+  "productName": "bibliothek",
+  "version": "1.0.0",
+  "description": "Bibliothek",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
+  },
+  "keywords": [],
+  "author": "alexk",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "executableName": "bibliothek"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "Bibliothek"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-progressbar": "^1.2.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
+    "request-progress": "^3.0.0",
+    "unzip": "^0.1.11",
+    "unzipper": "^0.10.1",
+    "node-cron": "^2.0.3"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.39",
+    "@electron-forge/maker-deb": "^6.0.0-beta.39",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.39",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.39",
+    "@electron-forge/maker-zip": "^6.0.0-beta.39",
+    "electron": "5.0.6"
+  }
+}
