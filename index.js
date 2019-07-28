@@ -63,7 +63,7 @@ const update = () => {
             if (data.VERSION_NUMBER !== undefined && data.VERSION_NUMBER != version.VERSION_NUMBER) {
                 progressBar.detail = 'Updates werden heruntergeladen ...';
                 progressBar.value = 0;
-                progress(request(`https://hipbib.alexkutschera.eu/versions/${data.VERSION_NUMBER}.zip`), {throttle: 100})
+                progress(request(`https://smartscreen.alexkutschera.eu/versions/${data.VERSION_NUMBER}.zip`), {throttle: 100})
                     .on('progress', state => {
                         progressBar.value = state.percent * 100;
                     })
